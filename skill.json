@@ -1,0 +1,42 @@
+{
+  "name": "genpark-pull-request-semantic-risk-blast-radius-scorer-skill",
+  "version": "1.0.0",
+  "description": "GenPark AI Agent Skill - Pull request semantic risk blast-radius and breaking change scorer identifying high-risk database and API mutations.",
+  "homepage": "https://genpark.ai/mcp",
+  "author": "genpark",
+  "category": "code-synthesis",
+  "tags": [
+    "qodo",
+    "copilot-enterprise",
+    "pr-review",
+    "blast-radius",
+    "risk-scorer"
+  ],
+  "inputs": {
+    "pr_diff_unified": {
+      "type": "string"
+    },
+    "changed_files_count": {
+      "type": "integer"
+    },
+    "modified_database_schemas": {
+      "type": "boolean"
+    }
+  },
+  "outputs": {
+    "risk_assessment_id": {
+      "type": "string"
+    },
+    "overall_risk_score": {
+      "type": "number"
+    },
+    "risk_level": {
+      "type": "string"
+    },
+    "pr_risk_report_markdown_url": {
+      "type": "string"
+    }
+  },
+  "entrypoint": "client.py",
+  "example": "example_usage.py"
+}
